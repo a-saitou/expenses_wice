@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Scheduler on Rails</title>
+ <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+ <%= stylesheet_link_tag 'dhtmlxscheduler', media: 'all', 'data-turbolinks-track' => true %>
+ <%= stylesheet_link_tag 'dhtmlxgrid', media: 'all', 'data-turbolinks-track' => true %>
+ <%= stylesheet_link_tag  "skins/dhtmlxgrid_dhx_skyblue", :media => "all" , 'data-turbolinks-track' => true %>
+
+ <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'dhtmlxscheduler', 'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'ext/dhtmlxscheduler_recurring', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag "dhtmlxcommon" , 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "dhtmlxgrid" , 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "dhtmlxgridcell" , 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "dhtmlxdataprocessor" , 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "ext/dhtmlxgrid_filter" , 'data-turbolinks-track' => true %>
+
+ <%= csrf_meta_tags %>  
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
+ 
+  

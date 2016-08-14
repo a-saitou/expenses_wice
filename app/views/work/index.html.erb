@@ -1,0 +1,19 @@
+<div id="grid_here" style="width: 600px; height: 400px;"></div>
+
+<input type="button" value="Add" onclick="grid.addRow(grid.uid(),'new work')" />
+<input type="button" value="Delete" onclick="grid.deleteSelectedRows()" />
+
+<script type="text/javascript" charset="UTF-8">
+	var grid = new dhtmlXGridObject("grid_here");
+	grid.setImagePath("assets/imgs/");
+	grid.setHeader("work.date, work.stff_id,work.agreement_id,work.start_time, work.end_time,work.work_time, work.over_time, work.late_night_over_time, work.paid_holiday,work.note");
+	grid.attachHeader("#text_filter,#text_filter,#text_filter");
+	grid.setColSorting("str,str,str");
+	grid.setInitWidths("100,100,*");
+	grid.setSkin("dhx_skyblue");
+	grid.init();
+
+	grid.load("<%= work_data_path %>", "json");
+	dp = new dataProcessor("<%= work_db_action_path %>");
+	dp.init(grid);
+</script>

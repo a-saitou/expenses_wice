@@ -1,0 +1,19 @@
+<div id="grid_here" style="width: 600px; height: 400px;"></div>
+
+<input type="button" value="Add" onclick="grid.addRow(grid.uid(),'new staff')" />
+<input type="button" value="Delete" onclick="grid.deleteSelectedRows()" />
+
+<script type="text/javascript" charset="UTF-8">
+	var grid = new dhtmlXGridObject("grid_here");
+	grid.setImagePath("assets/imgs/");
+	grid.setHeader("staff.name, staff.office, staff.order, staff.wage, staff.birthday, staff.hire_date,staff.leaving_date");
+	grid.attachHeader("#text_filter,#text_filter,#text_filter");
+	grid.setColSorting("str,str,str");
+	grid.setInitWidths("100,100,*");
+	grid.setSkin("dhx_skyblue");
+	grid.init();
+
+	grid.load("<%= staff_data_path %>", "json");
+	dp = new dataProcessor("<%= staff_db_action_path %>");
+	dp.init(grid);
+</script>
