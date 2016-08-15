@@ -27,7 +27,7 @@
     agreement.orderer_id
   end
 
-  g.column name: 'Orderer', attribute: '発注元', assoc: :orderer do |agreement| # joined table
+  g.column name: 'Orderer', attribute: 'name', assoc: :orderer do |agreement| # joined table
     agreement.orderer.name
   end
 
