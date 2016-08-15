@@ -1,7 +1,6 @@
 class AgreementController < ApplicationController
   def index
   	@agreements_grid = initialize_grid(Agreement, 
-  		include: :orderer,
       order:    'agreements.name',
       per_page: 20)
   end

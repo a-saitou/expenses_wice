@@ -29,9 +29,8 @@
   g.column name: 'Agreement Name', attribute: 'name' do |agreement|  # primary table
     link_to(agreement.name, agreement_path(agreement))
   end
-  g.column name: 'Orderer', attribute: 'name', assoc: :orderer do |agreement| # joined table
-    agreement.orderer.name
-  end
+  
+  g.column name: 'Orderer', attribute: 'name', assoc: :orderer 
 
    g.column  do |agreement|
     link_to('Edit', edit_agreement_path(agreement))
