@@ -1,7 +1,9 @@
 class AgreementController < ApplicationController
   def index
   	@agreements_grid = initialize_grid(Agreement, 
-  		includes: :orderer)
+  		include: :orderer
+      order:    'orderers.name',
+      per_page: 20)
   end
   # GET /agreements/1
   # GET /agreements/1.json
