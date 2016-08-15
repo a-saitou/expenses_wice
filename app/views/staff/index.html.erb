@@ -1,0 +1,36 @@
+<%= grid(@staffs_grid) do |g|
+
+  g.column do |staff|
+    staff.id
+  end
+
+  g.column  do |staff|
+    staff.name
+  end
+
+  g.column do |staff|
+    staff.office
+  end
+
+  g.column do |staff|
+    staff.order
+  end
+  g.column do |staff|
+    staff.wage
+  end
+
+  g.column  do |staff|
+    staff.birthday
+  end
+
+  g.column do |staff|
+    staff.hire_date
+  end
+
+  g.column do |staff|
+    staff.leaving_date
+  end
+  g.column do |staff|
+    link_to('Edit', edit_staff_path(staff))
+  end
+end -%>
