@@ -63,7 +63,7 @@ class StaffController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_orderer
-      @orderer = orderer.find(params[:id])
+      @orderer = Orderer.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
