@@ -2,7 +2,7 @@ class AgreementController < ApplicationController
    before_action :set_agreement, only: [:show, :edit, :update, :destroy]
   def index
   	@agreements_grid = initialize_grid(Agreement, 
-      order:    'agreements.name',
+      include: :orderer,
       per_page: 20)
   end
   # GET /agreements/1

@@ -26,11 +26,14 @@
    g.column name:  '発注元ID'  do |agreement|
     agreement.orderer_id
   end
+
   g.column name: 'Agreement Name', attribute: 'name' do |agreement|  # primary table
     link_to(agreement.name, agreement_path(agreement))
   end
   
-  g.column name: 'Orderer', attribute: 'name', assoc: :orderer 
+  g.column name: 'Orderer', attribute: 'name', assoc: :orderer do |agreement|
+    agreement.orderer.name
+  end
 
    g.column  do |agreement|
     link_to('Edit', edit_agreement_path(agreement))
