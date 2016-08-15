@@ -1,0 +1,37 @@
+ <b>名称:</b>
+  <%= @agreement.name %>
+</p>
+<p>  
+  <b>略称:</b>
+  <%= @agreement.abbreviation %>
+<p>
+<p>  
+<p>  
+  <b>コード:</b>
+  <%= @agreement.code %>
+<p>
+
+<p>  
+  <b>着工日:</b>
+  <%= @agreement.constraction_date %>
+<p>
+
+<p>  
+  <b>竣工日:</b>
+  <%= @agreement.competion_date %>
+<p>
+
+<p>  
+  <b>発注元:</b>
+  <%= @agreement.orderer_id %>
+<p>
+
+<p>  
+  <b>発注元:</b>
+  <%= @agreement.orderer_id %>
+<p>
+
+
+
+<%= link_to '編集', edit_agreement_path(@agreement) %> |
+<%= link_to '戻る', agreements_path %>

@@ -27,9 +27,10 @@
     agreement.orderer_id
   end
 
-   g.column name:  '発注元'  do |agreement|
-    agreement.orderer_id
+  g.column name: 'Orderer', attribute: '発注元', assoc: :orderer do |agreement| # joined table
+    agreement.orderer.name
   end
+
    g.column  do |agreement|
     link_to('Edit', edit_agreement_path(agreement))
   end

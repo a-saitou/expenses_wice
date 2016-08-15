@@ -1,0 +1,45 @@
+<%= form_for(@agreement) do |f| %>
+  <% if @agreement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@agreement.errors.count, "error") %> prohibited this agreement from being saved:</h2>
+
+      <ul>
+      <% @agreement.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :abbreviation %>
+    <%= f.text_field :abbreviation  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :code %>
+    <%= f.text_field :code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :constraction_date %>
+    <%= f.text_field :constraction_date %>
+  </div>
+  <div class="field">
+    <%= f.label :competion_date %>
+    <%= f.text_field :competion_date %>
+  </div>
+  <div class="field">
+    <%= f.label :orderer_id %>
+    <%= f.text_field :orderer_id  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
