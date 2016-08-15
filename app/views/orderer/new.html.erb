@@ -1,0 +1,18 @@
+<script src="http://ajaxzip3.googlecode.com/svn/trunk/ajaxzip3/ajaxzip3.js" charset="UTF-8"></script>
+
+<%= form_for(@orderer) do |f| %>
+  <% if @orderer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@orderer.errors.count, "error") %> prohibited this orderer from being saved:</h2>
+
+      <ul>
+      <% @orderer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<% end %>
+
+<%= link_to '戻る', orderers_path %>
