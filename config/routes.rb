@@ -3,11 +3,11 @@ Expenses::Application.routes.draw do
   get 'home/index'
   root :to => 'home#index'
 
-resources :calendar,
-          :orderer,
-          :agreement,
-          :work,
-          :staff
+resources :calendar
+resources          :orderer
+resources          :agreement
+resources          :work
+resources          :staff
 
    Wice.define_routes(self, 'queries')
   # The priority is based upon order of creation: first created -> highest priority.
