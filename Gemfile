@@ -26,7 +26,8 @@ gem 'jquery-ui-rails'
 
 gem 'bootstrap-sass', '3.1.1.1'
 gem 'sass-rails', '>= 3.2'
-gem 'sprockets', '2.11.0' # http://stackoverflow.com/questions/22392862/undefined-method-environment-for-nilnilclass-when-importing-bootstrap
+gem 'sprockets'
+#, '2.11.0' # http://stackoverflow.com/questions/22392862/undefined-method-environment-for-nilnilclass-when-importing-bootstrap
 
 gem 'coffee-rails'
 
@@ -45,7 +46,7 @@ group :development do
 end
 
 group :test, :development do
-  gem 'rspec-rails', '~> 2.13.0'
+  gem 'rspec-rails'
   # gem 'capybara' , '1.1.2'
 #  gem 'capybara', '~> 2.1.0'
   gem 'selenium-webdriver'
