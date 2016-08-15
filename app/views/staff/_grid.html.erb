@@ -1,36 +1,36 @@
 <%= grid(@staffs_grid) do |g|
 
-  g.column do |staff|
+   g.column name:  'ID'  do |staff|
     staff.id
   end
 
-  g.column  do |staff|
+   g.column name:  '名前'   do |staff|
     staff.name
   end
 
-  g.column do |staff|
+   g.column name:  '所属 ' do |staff|
     staff.office
   end
 
-  g.column do |staff|
+   g.column name:  '表示順'  do |staff|
     staff.order
   end
-  g.column do |staff|
+   g.column name:  '給与'  do |staff|
     staff.wage
   end
 
-  g.column  do |staff|
+   g.column name:  '誕生日'   do |staff|
     staff.birthday
   end
 
-  g.column do |staff|
+   g.column name:  '入社日'  do |staff|
     staff.hire_date
   end
 
-  g.column do |staff|
+   g.column name:  '退社日'  do |staff|
     staff.leaving_date
   end
-  g.column do |staff|
+   g.column name:  'ID'  do |staff|
     link_to('Edit', edit_staff_path(staff))
   end
 end -%>
