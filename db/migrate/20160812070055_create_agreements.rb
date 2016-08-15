@@ -6,7 +6,7 @@ class CreateAgreements < ActiveRecord::Migration
       t.integer      :code
       t.integer     :orderer_id
       t.time         :constraction_date
-      t.time         :complketion_date
+      t.time         :completion_date
       t.timestamps
     end
       add_foreign_key :agreements, :orderer

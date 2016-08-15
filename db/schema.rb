@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20160812070055) do
     t.integer  "code"
     t.integer  "orderer_id"
     t.time     "constraction_date"
-    t.time     "complketion_date"
+    t.time     "completion_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
