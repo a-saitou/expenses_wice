@@ -1,0 +1,29 @@
+<%= grid(@calendars_grid) do |g|
+
+   g.column name:  'ID'  do |calendar|
+    calendar.id
+  end
+
+   g.column name:  '日付'   do |calendar|
+    calendar.hiduke
+  end
+
+   g.column name:  '年' do |calendar|
+    calendar.year
+  end
+
+   g.column name:  '月'  do |calendar|
+    calendar.month
+  end
+   g.column name:  '日'  do |calendar|
+    calendar.day
+  end
+
+   g.column name:  '休日'   do |calendar|
+    calendar.holiday
+  end
+
+   g.column do |calendar|
+    link_to('Edit', edit_calendar_path(calendar))
+  end
+end -%>

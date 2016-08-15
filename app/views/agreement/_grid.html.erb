@@ -1,0 +1,36 @@
+<%= grid(@agreements_grid) do |g|
+
+   g.column name:  'ID'  do |agreement|
+    agreement.id
+  end
+
+   g.column name:  '略称'   do |agreement|
+    agreement.abbreviation
+  end
+
+   g.column name:  '名称 ' do |agreement|
+    agreement.name
+  end
+
+   g.column name:  'CODE'  do |agreement|
+    agreement.number
+  end
+   g.column name:  '着工日'  do |agreement|
+    agreement.constravtion_date
+  end
+
+   g.column name:  '竣工日'   do |agreement|
+    agreement.completion_date
+  end
+
+   g.column name:  '発注元ID'  do |agreement|
+    agreement.orderer_id
+  end
+
+   g.column name:  '発注元'  do |agreement|
+    agreement.orderer_id
+  end
+   g.column  do |agreement|
+    link_to('Edit', edit_agreement_path(agreement))
+  end
+end -%>

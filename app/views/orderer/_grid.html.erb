@@ -1,0 +1,14 @@
+<%= grid(@orderers_grid) do |g|
+
+   g.column name:  'ID'  do |orderer|
+    orderer.id
+  end
+
+   g.column name:  '名称'   do |orderer|
+    orderer.name
+  end
+
+   g.column  do |orderer|
+    link_to('Edit', edit_orderer_path(orderer))
+  end
+end -%>

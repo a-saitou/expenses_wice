@@ -1,0 +1,40 @@
+<%= grid(@works_grid) do |g|
+
+   g.column name:  'ID'  do |work|
+    work.id
+  end
+   g.column name:  '日付'   do |work|
+    work.calendar_id
+  end
+   g.column name:  '社員' do |work|
+    work.staff_id
+  end
+   g.column name:  '契約'  do |work|
+    work.agreement_id
+  end
+   g.column name:  '開始時間' do |work|
+    work.start_time
+  end
+   g.column name:  '終了時間'  do |work|
+    work.end_time
+  end
+   g.column name:  '労働時間'  do |work|
+    work.work_time
+  end
+
+   g.column name:  '残業時間'   do |work|
+    work.over_time
+  end
+   g.column name:  '深夜残業時間'  do |work|
+    work.late_night_over_time
+  end
+   g.column name:  '有給時間'  do |work|
+    work.paid_holiday
+  end
+   g.column name:  '代休時間'   do |work|
+    work.agency_holiday
+  end
+   g.column  do |work|
+    link_to('Edit', edit_work_path(work))
+  end
+end -%>

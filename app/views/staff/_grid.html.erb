@@ -30,7 +30,7 @@
    g.column name:  '退社日'  do |staff|
     staff.leaving_date
   end
-   g.column name:  'ID'  do |staff|
+   g.column do |staff|
     link_to('Edit', edit_staff_path(staff))
   end
 end -%>
