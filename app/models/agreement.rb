@@ -1,5 +1,5 @@
 class Agreement < ActiveRecord::Base
-    has_many :works ,foreign_key: 'agreement_id'
+    has_many :works 
     
 	belongs_to :orderer
 end
