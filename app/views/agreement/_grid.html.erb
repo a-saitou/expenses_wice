@@ -25,7 +25,6 @@
 
    g.column name:  '発注元ID'  do |agreement|
     agreement.orderer_id
-    agreement.orderer.name
   end
 
   g.column name: '発注元', attribute: 'id', assoc: :orderer do |agreement|
