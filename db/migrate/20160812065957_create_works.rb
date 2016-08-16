@@ -13,7 +13,8 @@ class CreateWorks < ActiveRecord::Migration
       t.integer      :agency_holiday
       t.timestamps
     end
-    add_foreign_key :works, :staff
-    add_foreign_key :works, :agreement
+    add_foreign_key :works, :staffs
+    add_foreign_key :works, :agreements
+    add_foreign_key :works, :calendars
   end
 end
