@@ -8,10 +8,10 @@ development:
   encoding: utf8
   reconnect: false
   pool: 5
-  username: akirasaitou　
+  username: root　
   password: YGPft21C　
   socket: /var/lib/mysql/mysql.sock　
-  host: akirasaitou.ce5plgxi44fk.us-west-2.rds.amazonaws.com　
+  host: akira.ce5plgxi44fk.us-west-2.rds.amazonaws.com　
   database: hamada　
 
 # Warning: The database defined as "test" will be erased and
