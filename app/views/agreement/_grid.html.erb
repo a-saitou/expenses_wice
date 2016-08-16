@@ -32,7 +32,7 @@
   end
   
   g.column name: 'Orderer', attribute: 'name', assoc: :orderer do |agreement|
-    agreement.orderers.name
+    agreement.orderer.name
  end
 
    g.column  do |agreement|
