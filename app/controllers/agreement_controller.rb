@@ -3,6 +3,7 @@ class AgreementController < ApplicationController
   def index
   	@agreements_grid = initialize_grid(Agreement, 
       include: :orderer,
+      order: 'orderers.name',
       per_page: 20)
   end
   # GET /agreements/1
