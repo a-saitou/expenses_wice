@@ -32,8 +32,8 @@
   end
   
   g.column name: 'Orderer', attribute: 'name', assoc: :orderer do |agreement|
-    name
-  end
+    agreement.name
+ end
 
    g.column  do |agreement|
     link_to('Edit', edit_agreement_path(agreement))
