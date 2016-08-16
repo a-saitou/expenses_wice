@@ -39,8 +39,8 @@ gem 'uglifier', '>= 1.0.3'
 #group :production, :postgres do
 #  gem 'pg'
 #end
-#gem 'mysql2', '~>0.3.13'
-gem 'sqlite3'
+gem 'mysql2', '~>0.3.13'
+#gem 'sqlite3'
 group :development do
   gem 'quiet_assets'
 end
