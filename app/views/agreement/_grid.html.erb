@@ -31,7 +31,7 @@
     link_to(agreement.name, agreement_path(agreement))
   end
   
-  g.column name: 'Orderer', attribute: 'name', assoc: :orderer do |agreement|
+  g.column name: 'Orderer', attribute: 'id', assoc: :orderer do |agreement|
     agreement.orderer.name
  end
 
