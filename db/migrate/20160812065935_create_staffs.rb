@@ -11,5 +11,6 @@ class CreateStaffs < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :staffs, :name
   end
 end

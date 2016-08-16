@@ -9,6 +9,6 @@ class CreateAgreements < ActiveRecord::Migration
       t.time         :completion_date
       t.timestamps
     end
-
+   add_index :agreements, :orderer_id
   end
 end

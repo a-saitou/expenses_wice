@@ -13,6 +13,8 @@ class CreateWorks < ActiveRecord::Migration
       t.integer      :agency_holiday
       t.timestamps
     end
-
+   add_index :works, :calendar_id
+   add_index :works, :staff_id
+   add_index :works, :agreement_id
   end
 end
