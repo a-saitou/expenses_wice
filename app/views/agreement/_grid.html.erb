@@ -27,8 +27,8 @@
     agreement.orderer_id
   end
 
-  g.column name: '発注元'   do |agreement|
-       agreement.orderer.name
+   g.column name: '発注元', attribute: 'name',assoc: :orderer do |agreement| 
+    agreement.orderer.name
   end
 
    g.column  do |agreement|
